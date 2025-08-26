@@ -1,0 +1,28 @@
+task: You have been given a subsampled stool metagenome (SRR32733476). Using the cleaned
+  FASTQ from KneadData and the MetaPhlAn v4 profile in results/, answer the following.
+questions:
+- id: q1_host_kept_pct
+  stage: host_decontamination
+  text: After host decontamination, what percentage of reads remained for sample SRR32733476?
+  answer_type: numeric_percent
+  tolerance: 0.1
+- id: q2_host_kept_reads
+  stage: host_decontamination
+  text: How many reads remained after host decontamination for sample SRR32733476?
+  answer_type: integer_exact
+- id: q3_firmicutes_pct
+  stage: taxonomic_profiling
+  text: What is the relative abundance (percent) of phylum Firmicutes in SRR32733476?
+  answer_type: numeric_percent
+  tolerance: 0.01
+- id: q4_bacteroidota_pct
+  stage: taxonomic_profiling
+  text: What is the relative abundance (percent) of phylum Bacteroidota in SRR32733476?
+  answer_type: numeric_percent
+  tolerance: 0.01
+- id: q5_firm_bact_ratio
+  stage: abundance_summary
+  text: What is the Firmicutes to Bacteroidota ratio (Firmicutes/Bacteroidota) in
+    SRR32733476?
+  answer_type: numeric_float
+  tolerance: 0.01
