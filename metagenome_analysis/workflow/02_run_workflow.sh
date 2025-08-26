@@ -4,13 +4,7 @@ set -euo pipefail
 # Usage:
 #   workflow/02_run_workflow.sh <SRR_ACCESSION> [--threads N] [--trimmomatic-dir DIR] \
 #                               [--host-db-prefix PATH] [--mp-db-dir DIR] [--install-metaphlan-db]
-#
-# Examples:
-#   workflow/02_run_workflow.sh SRR32733476
-#   workflow/02_run_workflow.sh SRR32733476 --threads 8 --trimmomatic-dir /usr/share/trimmomatic
-#
-# Expects: kneaddata (>=0.12), bowtie2, trimmomatic (jar), metaphlan (>=4.1), python3+pandas
-# Places everything under workflow/: db/, qc/, results/, data/
+
 
 SRR="${1:?Provide SRR accession, e.g., SRR32733476}"; shift || true
 
