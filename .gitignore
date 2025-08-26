@@ -1,0 +1,14 @@
+# keep the repo light — ignore all large/cache stuff
+# databases and QC live under workflow/, but don't commit them
+workflow/db/
+workflow/qc/
+
+# raw and subsampled FASTQs
+workflow/data/raw/
+workflow/data/processed/*.fastq
+workflow/data/processed/*.fastq.gz
+
+# tmp / cache
+**/.ipynb_checkpoints/
+*.tmp
+*.log
