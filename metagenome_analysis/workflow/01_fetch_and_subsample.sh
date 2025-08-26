@@ -3,9 +3,6 @@ set -euo pipefail
 
 # Usage:
 #   workflow/01_fetch_and_subsample.sh <SRR_ACCESSION> [N_READS] [SEED]
-# Example:
-#   workflow/01_fetch_and_subsample.sh SRR32733476 1500000 42
-#
 # Requires: curl, awk, seqtk, pigz   (aria2c optional but faster)
 
 SRR="${1:?Provide SRR accession, e.g., SRR32733476}"
@@ -47,6 +44,3 @@ seqtk sample -s"${SEED}" "$out" "${NREAD}" | pigz -c > "${PROC}/${SRR}.sub.fastq
 
 echo "[DONE] ${PROC}/${SRR}.sub.fastq.gz"
 ls -lh "${PROC}/${SRR}.sub.fastq.gz"
-
-
-
