@@ -3,4 +3,5 @@ answers:
   q2_host_kept_reads: 1500000
   q3_firmicutes_pct: 63.68142
   q4_bacteroidota_pct: 31.08109
-  q5_firm_bact_ratio: 2.04888
+  q5_top_species: Faecalibacterium prausnitzii
+
