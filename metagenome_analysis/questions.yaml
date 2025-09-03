@@ -1,26 +1,25 @@
-task: You have been given a subsampled stool metagenome (SRR32733476). Using the cleaned
-  FASTQ from KneadData and the MetaPhlAn v4 profile in results/, answer the following.
+task: Using the subsampled FASTQ (processed input), the KneadData log, and the MetaPhlAn
+  v4 profile, answer the following to validate different workflow stages.
 questions:
-- id: q1_host_kept_pct
+- id: q1_subsampled_reads
+  stage: data_preparation
+  text: How many reads are present in the subsampled FASTQ for sample SRR32733476?
+  answer_type: integer_exact
+- id: q2_mpa_index
+  stage: reference_db
+  text: Which MetaPhlAn database index/tag was used for profiling SRR32733476?
+  answer_type: string_exact
+- id: q3_host_kept_pct
   stage: host_decontamination
-  text: After host decontamination, what percentage of reads remained for sample SRR32733476?
+  text: After host decontamination, what percentage of reads remained (relative to
+    trimmed reads) for sample SRR32733476?
   answer_type: numeric_percent
   tolerance: 0.1
-- id: q2_host_kept_reads
-  stage: host_decontamination
-  text: How many reads remained after host decontamination for sample SRR32733476?
-  answer_type: integer_exact
-- id: q3_firmicutes_pct
-  stage: taxonomic_profiling
-  text: What is the relative abundance (percent) of phylum Firmicutes in SRR32733476?
-  answer_type: numeric_percent
-  tolerance: 0.01
-- id: q4_bacteroidota_pct
-  stage: taxonomic_profiling
-  text: What is the relative abundance (percent) of phylum Bacteroidota in SRR32733476?
-  answer_type: numeric_percent
-  tolerance: 0.01
-- id: q5_top_species
+- id: q4_top_species
   stage: taxonomic_profiling
   text: Which species is most abundant in SRR32733476?
   answer_type: string_exact
+- id: q5_species_ge1pct
+  stage: abundance_summary
+  text: "How many species have \u22651% relative abundance in SRR32733476?"
+  answer_type: integer_exact
