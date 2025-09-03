@@ -20,9 +20,7 @@ questions:
   text: What is the relative abundance (percent) of phylum Bacteroidota in SRR32733476?
   answer_type: numeric_percent
   tolerance: 0.01
-- id: q5_firm_bact_ratio
-  stage: abundance_summary
-  text: What is the Firmicutes to Bacteroidota ratio (Firmicutes/Bacteroidota) in
-    SRR32733476?
-  answer_type: numeric_float
-  tolerance: 0.01
+- id: q5_top_species
+  stage: taxonomic_profiling
+  text: Which species is most abundant in SRR32733476?
+  answer_type: string_exact
