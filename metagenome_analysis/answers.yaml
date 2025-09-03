@@ -1,7 +1,6 @@
 answers:
-  q1_host_kept_pct: 100.0
-  q2_host_kept_reads: 1500000
-  q3_firmicutes_pct: 63.68142
-  q4_bacteroidota_pct: 31.08109
-  q5_top_species: Faecalibacterium prausnitzii
-
+  q1_subsampled_reads: 1500000
+  q2_mpa_index: mpa_vJan25_CHOCOPhlAnSGB_202503
+  q3_host_kept_pct: 100.0
+  q4_top_species: Faecalibacterium prausnitzii
+  q5_species_ge1pct: 47
