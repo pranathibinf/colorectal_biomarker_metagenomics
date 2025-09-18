@@ -1,18 +1,18 @@
-task: Using the subsampled FASTQ (processed input), the KneadData log, and the MetaPhlAn
-  v4 profile, answer the following to validate different workflow stages.
+task: Using the subsampled FASTQ, KneadData log, and MetaPhlAn v4 profile, answer
+  the following for SRR32733476.
 questions:
 - id: q1_subsampled_reads
   stage: data_preparation
-  text: How many reads are present in the subsampled FASTQ for sample SRR32733476?
+  text: How many reads are present in the subsampled FASTQ for SRR32733476?
   answer_type: integer_exact
-- id: q2_mpa_index
-  stage: reference_db
-  text: Which MetaPhlAn database index/tag was used for profiling SRR32733476?
-  answer_type: string_exact
+- id: q2_unique_species
+  stage: taxonomic_profiling
+  text: How many unique species were detected in SRR32733476 according to the MetaPhlAn
+    profile?
+  answer_type: integer_exact
 - id: q3_host_kept_pct
   stage: host_decontamination
-  text: After host decontamination, what percentage of reads remained (relative to
-    trimmed reads) for sample SRR32733476?
+  text: After host decontamination, what percentage of reads remained in SRR32733476?
   answer_type: numeric_percent
   tolerance: 0.1
 - id: q4_top_species
