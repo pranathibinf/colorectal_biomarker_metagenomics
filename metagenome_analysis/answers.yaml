@@ -1,6 +1,6 @@
 answers:
   q1_subsampled_reads: 1500000
-  q2_mpa_index: mpa_vJan25_CHOCOPhlAnSGB_202503
+  q2_unique_species: 207
   q3_host_kept_pct: 100.0
   q4_top_species: Faecalibacterium prausnitzii
   q5_species_ge1pct: 47
